@@ -55,6 +55,7 @@ main() {
 	cout<<endl;
 	cout<<"masukkan bilangan desimal = "; cin>>num;
 	cout<<endl;
+	
 	cout<<"|======= Button=======|"<<endl;
 	cout<<"|1. Konversi to biner |"<<endl;
 	cout<<"|2. Konversi to oktal |"<<endl;
