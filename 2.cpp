@@ -79,3 +79,51 @@ main() {
 	getch();
 	return 0;
 }
+
+//ke oktal
+void oktal(){
+	for(o=1,n=num;n>0;n=n/8,o++)
+ 	{
+		 MAXSTACK=o;
+		 m=n%8;
+		 push(m,&tumpukan);
+ 	}
+	for(i=MAXSTACK;i>0;i--)
+ 	{
+ 	printf("%d", pop(&tumpukan));
+ 	}
+}
+//ke biner
+void biner(){
+	for(o=1,n=num;n>0;n=n/2,o++)
+	 {
+		 MAXSTACK=o;
+ 		m=n%2;
+		 push(m,&tumpukan);
+	 }
+	 for(i=MAXSTACK;i>0;i--)
+	 {
+	 printf("%d", pop(&tumpukan));
+	 }
+}
+//ke heksa desimal
+void heksa(){
+	for(o=1,n=num;n>0;n=n/16,o++)
+	 {
+		 MAXSTACK=o;
+		 m=n%16;
+	 push(m,&tumpukan);
+	 }
+	 for(i=MAXSTACK;i>0;i--)
+ 	 {
+ 		p=pop(&tumpukan);
+ 		if(p<=9)
+ 		printf("%d",p);
+ 		else if(p==10)printf("A");
+		else if(p==11)printf("B");
+		else if(p==12)printf("C");
+ 		else if(p==13)printf("D");
+ 		else if(p==14)printf("E");
+ 		else if(p==15)printf("F");
+	 }
+}
